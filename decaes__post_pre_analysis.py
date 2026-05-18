@@ -13,4 +13,9 @@ viewer.add_image(ggm_pre, name='Pre', colormap='magma')
 viewer.add_image(ggm_post, name='Post', colormap='magma')
 viewer.grid.enabled = True
 
+h, w = ggm_pre.shape[-2], ggm_pre.shape[-1]
+label_points = np.array([[0, 10, 10], [0, 10, 10]])
+label_text = {'string': ['PRE', 'POST'], 'size': 18, 'color': 'white', 'anchor': 'upper_left'}
+viewer.add_points(label_points, name='labels', text=label_text, size=0, face_color='transparent', features={'label': ['PRE', 'POST']})
+
 napari.run()
