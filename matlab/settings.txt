@@ -1,0 +1,14 @@
+--T2map
+--TE
+10e-3
+--nT2
+7
+--T2Range
+10e-3
+0.14
+--nRefAngles
+512
+--nRefAnglesMin
+256
+--Reg
+gcv
