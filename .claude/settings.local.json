@@ -3,7 +3,15 @@
     "allow": [
       "WebFetch(domain:github.com)",
       "WebFetch(domain:raw.githubusercontent.com)",
-      "WebFetch(domain:jondeuce.github.io)"
+      "WebFetch(domain:jondeuce.github.io)",
+      "Bash(Get-ChildItem D:\\\\Development\\\\MRI-sure-program\\\\quant-t2-muscle *)",
+      "WebSearch",
+      "WebFetch(domain:pypi.org)",
+      "Bash(gh api *)",
+      "Bash(python3 -c \"import json,sys; [print\\(f['name']\\) for f in json.load\\(sys.stdin\\)]\")",
+      "PowerShell(Get-ChildItem \"D:\\\\Development\\\\MRI-sure-program\\\\quant-t2-muscle\" -Recurse | Where-Object { !$_.PSIsContainer } | Select-Object FullName)",
+      "Bash(git remote *)",
+      "PowerShell(Rename-Item *)"
     ]
   }
 }

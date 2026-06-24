@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dicom2decaes"
+version = "0.1.0"
+description = "A toolbox for converting multi-echo DICOM MRI data to T2 maps using DECAES"
+dependencies = [
+    "dcm2niix",
+    "juliacall",
+]
+
+[tool.setuptools]
+packages = ["dicom2decaes", "dicom2decaes.src"]
+package-dir = {"dicom2decaes" = ".", "dicom2decaes.src" = "src"}
+
+[tool.setuptools.package-data]
+"dicom2decaes.src" = ["settings.txt"]

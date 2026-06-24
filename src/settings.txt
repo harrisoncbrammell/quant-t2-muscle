@@ -1,0 +1,21 @@
+# DECAES T2 mapping settings
+# TE is set automatically from the scan data - do not add it here.
+
+# T2 range in seconds (min max) — default covers full muscle T2 range
+--T2Range
+0.01
+0.14
+
+# Number of discrete T2 values in the output spectrum
+--nT2
+40
+
+# Regularization method for solving the T2 distribution (gcv = generalized cross-validation)
+--Reg
+gcv
+
+# Number of EPG flip angle steps used for the signal model (higher = more accurate, slower)
+--nRefAngles
+512
+--nRefAnglesMin
+256
