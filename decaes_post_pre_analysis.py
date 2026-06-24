@@ -1,3 +1,5 @@
+# TODO: add napari and pymatreader as optional dependencies in pyproject.toml so this script works after a clean install
+# TODO: add a CLI entry point in pyproject.toml (e.g. `dicom2decaes`) so the pipeline can be run from the terminal without a wrapper script
 import sys
 import tkinter as tk
 from tkinter import filedialog, messagebox

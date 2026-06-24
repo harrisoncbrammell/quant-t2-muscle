@@ -33,6 +33,8 @@ def process_nii_decaes(nii_path, output_dir):
         if line.strip() and not line.startswith("#")
     ]
 
+    # TODO: add optional mask argument (--mask <path>) to skip background voxels and speed up processing
+    # TODO: add --T2dist flag (or make it a parameter) to optionally output the full T2 distribution spectrum alongside the map
     jl.DECAES.main([
         str(nii_path),
         "--T2map",
