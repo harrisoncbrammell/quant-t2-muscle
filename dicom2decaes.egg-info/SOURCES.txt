@@ -1,0 +1,12 @@
+pyproject.toml
+./__init__.py
+./decaes_post_pre_analysis.py
+./run_t2_pipeline.py
+dicom2decaes.egg-info/PKG-INFO
+dicom2decaes.egg-info/SOURCES.txt
+dicom2decaes.egg-info/dependency_links.txt
+dicom2decaes.egg-info/requires.txt
+dicom2decaes.egg-info/top_level.txt
+src/dicomto4dnii.py
+src/process_nii_decaes.py
+src/settings.txt

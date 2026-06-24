@@ -5,7 +5,7 @@
 # Requires: pip install dcm2niix
 #
 # Usage:
-#   dicomto4dnii(dicom_dir, output_dir)             -> saves output.nii.gz and output.json
+#   dicomto4dnii(dicom_dir, output_dir)             -> saves echo_time_series.nii.gz and echo_time_series.json
 #   dicomto4dnii(dicom_dir, output_dir, "t2scan")   -> saves t2scan.nii.gz and t2scan.json
 #
 # Arguments:
@@ -17,7 +17,7 @@ import subprocess
 from pathlib import Path
 
 
-def dicomto4dnii(dicom_dir, output_dir, filename="output"):
+def dicomto4dnii(dicom_dir, output_dir, filename="echo_time_series"):
     dicom_dir = Path(dicom_dir)
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)

@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: dicom2decaes
+Version: 0.1.0
+Summary: A toolbox for converting multi-echo DICOM MRI data to T2 maps using DECAES
+Requires-Dist: dcm2niix
+Requires-Dist: juliacall

@@ -14,8 +14,13 @@
 --Reg
 gcv
 
+# Assumed T1 relaxation time in seconds used by the EPG signal model
+# DECAES default is 1.0 s — adjust for your tissue/field strength (e.g. ~1.4 s for muscle at 3T)
+--T1
+1.4
+
 # Number of EPG flip angle steps used for the signal model (higher = more accurate, slower)
 --nRefAngles
-512
+8
 --nRefAnglesMin
-256
+8

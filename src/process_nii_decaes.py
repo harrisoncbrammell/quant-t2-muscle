@@ -14,6 +14,8 @@ SETTINGS_FILE = Path(__file__).parent / "settings.txt"
 
 
 def process_nii_decaes(nii_path, output_dir):
+    import os
+    os.environ.setdefault("JULIA_NUM_THREADS", "auto")
     from juliacall import Main as jl
     jl.seval("using DECAES")
 
@@ -35,10 +37,11 @@ def process_nii_decaes(nii_path, output_dir):
 
     # TODO: add optional mask argument (--mask <path>) to skip background voxels and speed up processing
     # TODO: add --T2dist flag (or make it a parameter) to optionally output the full T2 distribution spectrum alongside the map
-    jl.DECAES.main([
+    args = [
         str(nii_path),
         "--T2map",
         "--TE",     str(te),
         *settings_args,
         "--output", str(output_dir),
-    ])
+    ]
+    jl.DECAES.main(jl.Vector[jl.String](args))
